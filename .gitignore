@@ -2,6 +2,13 @@
 Thumbs.db
 ehthumbs.db
 
+## server
+node_modules/
+dist/
+dist-server/
+npm-debug.log
+.vscode/
+
 # Folder config file
 Desktop.ini
 

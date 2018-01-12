@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 
 //to serve static files
-app.use(express.static(__dirname + "/dist/browser"));
+app.use(express.static(__dirname + "/dist"));
 var port = process.env.PORT || 9511;
 
 //handler if url has api at the begining
@@ -11,7 +11,7 @@ app.get('/api/*', function (req, res) {
 });
 
 //fallback to index.html if resource not found or incase request url doesn't match any listeners
-app.use('/*', express.static(__dirname + '/dist/browser/index.html'));
+app.use('/*', express.static(__dirname + '/dist/index.html'));
 
 //or
 /*app.get('/*', function(req, res){
